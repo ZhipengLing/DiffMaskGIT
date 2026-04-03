@@ -1,0 +1,113 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{chang2022maskgit}
+\citation{esser2021taming}
+\citation{li2024mar}
+\citation{oord2017neural}
+\citation{chang2022maskgit}
+\citation{su2021roformer}
+\citation{li2024mar}
+\citation{besnier2025halton}
+\citation{chang2022maskgit}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{1}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{II}{1}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Masked Generative Image Transformers}{1}{subsection.2.1}\protected@file@percent }
+\citation{chang2023muse}
+\citation{li2024mar}
+\citation{besnier2025halton}
+\citation{hayakawa2025demystifying}
+\citation{zheng2024maskdiffusion}
+\citation{wang2025remdm}
+\citation{su2021roformer}
+\citation{lu2024fit}
+\citation{fang2023eva}
+\citation{flux2024}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Diffusion Loss for Masked Models}{2}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Sampling Optimization in Masked Models}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-D}}Unifying Masked and Diffusion Models}{2}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-E}}Remasking for Error Correction}{2}{subsection.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-F}}Positional Encoding: 2D Axial RoPE}{2}{subsection.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Proposed Methodology}{2}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{III}{2}{Proposed Methodology}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Diffusion-Guided Training Loss}{2}{subsection.3.1}\protected@file@percent }
+\newlabel{subsec:diffloss}{{\mbox  {III-A}}{2}{Diffusion-Guided Training Loss}{subsection.3.1}{}}
+\newlabel{eq:ce_loss}{{1}{2}{Diffusion-Guided Training Loss}{equation.3.1}{}}
+\citation{li2024mar}
+\citation{besnier2025halton}
+\citation{besnier2025halton}
+\citation{hayakawa2025demystifying}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Overview of our proposed framework.} An input image is encoded into a continuous latent grid via a KL-16 encoder (eliminating VQ). During training, a diffusion loss module (red) replaces cross-entropy. During inference, a hybrid confidence-aware sampler (purple) replaces Gumbel-Max, with an iterative re-masking loop for progressive refinement. 2D Axial RoPE is integrated into every self-attention layer of the bidirectional transformer.}}{3}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:pipeline}{{1}{3}{\textbf {Overview of our proposed framework.} An input image is encoded into a continuous latent grid via a KL-16 encoder (eliminating VQ). During training, a diffusion loss module (red) replaces cross-entropy. During inference, a hybrid confidence-aware sampler (purple) replaces Gumbel-Max, with an iterative re-masking loop for progressive refinement. 2D Axial RoPE is integrated into every self-attention layer of the bidirectional transformer}{figure.caption.1}{}}
+\newlabel{eq:diff_loss}{{2}{3}{Diffusion-Guided Training Loss}{equation.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Hybrid Confidence-Aware Sampling}{3}{subsection.3.2}\protected@file@percent }
+\newlabel{subsec:sampling}{{\mbox  {III-B}}{3}{Hybrid Confidence-Aware Sampling}{subsection.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {Comparison of decoding strategies.} Left: original MaskGIT uses uniform Gumbel-Max sampling for all positions. Right: our hybrid approach applies greedy selection for high-confidence tokens and stochastic sampling for uncertain ones, with Halton-aware spatial scheduling for re-masking.}}{3}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:sampling}{{2}{3}{\textbf {Comparison of decoding strategies.} Left: original MaskGIT uses uniform Gumbel-Max sampling for all positions. Right: our hybrid approach applies greedy selection for high-confidence tokens and stochastic sampling for uncertain ones, with Halton-aware spatial scheduling for re-masking}{figure.caption.2}{}}
+\newlabel{eq:hybrid}{{3}{3}{Hybrid Confidence-Aware Sampling}{equation.3.3}{}}
+\citation{fang2023eva}
+\citation{lu2024fit}
+\citation{flux2024}
+\citation{howard2020fastai}
+\citation{chang2022maskgit}
+\citation{li2024mar}
+\citation{li2024mar}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Integration with 2D Axial RoPE}{4}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Experiments}{4}{section.4}\protected@file@percent }
+\newlabel{sec:experiments}{{IV}{4}{Experiments}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Scaled-Down Experimental Setup}{4}{subsection.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Experimental results on ImageNette (128$\times $128, 10 classes). All generative models use 12 iterative decoding steps. $\downarrow $\,=\,lower is better, $\uparrow $\,=\,higher is better. Model sizes are shown for comparison with the full-scale configuration.}}{4}{table.caption.3}\protected@file@percent }
+\newlabel{tab:results}{{I}{4}{Experimental results on ImageNette (128$\times $128, 10 classes). All generative models use 12 iterative decoding steps. $\downarrow $\,=\,lower is better, $\uparrow $\,=\,higher is better. Model sizes are shown for comparison with the full-scale configuration}{table.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Baselines}{4}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Main Results}{4}{subsection.4.3}\protected@file@percent }
+\citation{besnier2025halton}
+\citation{li2024mar}
+\citation{li2024mar}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces FID vs.\ decoding steps for three sampling strategies, evaluated on MaskGIT + 2D RoPE. Bold indicates the best FID per step count.}}{5}{table.caption.4}\protected@file@percent }
+\newlabel{tab:ablation_steps}{{II}{5}{FID vs.\ decoding steps for three sampling strategies, evaluated on MaskGIT + 2D RoPE. Bold indicates the best FID per step count}{table.caption.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Effect of confidence threshold $\tau $ on FID using the hybrid sampler (12 decoding steps, MaskGIT + 2D RoPE).}}{5}{table.caption.5}\protected@file@percent }
+\newlabel{tab:ablation_tau}{{III}{5}{Effect of confidence threshold $\tau $ on FID using the hybrid sampler (12 decoding steps, MaskGIT + 2D RoPE)}{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Ablation: Sampling Strategy Analysis}{5}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Ablation: Confidence Threshold Sensitivity}{5}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-F}}Token Oscillation Analysis}{5}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-G}}Image Completion}{5}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Discussion}{5}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{V}{5}{Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Why Diffusion Loss Underperforms at Small Scale}{5}{subsection.5.1}\protected@file@percent }
+\citation{besnier2025halton}
+\citation{li2024mar}
+\citation{hayakawa2025demystifying}
+\bibcite{chang2022maskgit}{1}
+\bibcite{esser2021taming}{2}
+\bibcite{li2024mar}{3}
+\bibcite{oord2017neural}{4}
+\bibcite{su2021roformer}{5}
+\bibcite{besnier2025halton}{6}
+\bibcite{hayakawa2025demystifying}{7}
+\bibcite{zheng2024maskdiffusion}{8}
+\bibcite{wang2025remdm}{9}
+\bibcite{chang2023muse}{10}
+\bibcite{crowson2022vqganclip}{11}
+\bibcite{lu2024fit}{12}
+\bibcite{fang2023eva}{13}
+\bibcite{flux2024}{14}
+\bibcite{deng2009imagenet}{15}
+\bibcite{lin2014mscoco}{16}
+\bibcite{heusel2017fid}{17}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Scaling Predictions}{6}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}What Worked}{6}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Future Directions}{6}{section.6}\protected@file@percent }
+\newlabel{sec:future}{{VI}{6}{Future Directions}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Full-Scale Training}{6}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Toward a Type-2 Sampler}{6}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Adaptive MLP Capacity Allocation}{6}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{6}{section.7}\protected@file@percent }
+\newlabel{sec:conclusion}{{VII}{6}{Conclusion}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{References}{6}{section*.6}\protected@file@percent }
+\bibcite{goyal2017accurate}{18}
+\bibcite{ho2020ddpm}{19}
+\bibcite{howard2020fastai}{20}
+\gdef \@abspage@last{7}
